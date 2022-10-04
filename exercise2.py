@@ -16,6 +16,10 @@ class Point2D:
 
     def __iadd__(self, other: Vector) -> Vector:
         self._coordinates += other
+
+    def __isub__(self,vector: Vector) -> Point2D:
+        self._coordinates[0] -= vector[0]
+        self._coordinates[1] -= vector[1]
         return self
 
 def test_point_construction() -> None:
